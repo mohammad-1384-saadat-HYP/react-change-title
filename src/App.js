@@ -4,7 +4,7 @@ import ChangeTitle from "./Component/ChangeTitle";
 const App = () => {
     return (
         <>
-            {/*<ChangeTitle/>*/}
+            <ChangeTitle/>
         </>
     );
 };

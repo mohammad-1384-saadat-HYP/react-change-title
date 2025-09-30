@@ -6,13 +6,19 @@ const ChangeTitle = () => {
 
     useEffect(() => {
         document.title = `you clicked ${count} times!`;
+        console.log("count = " + count);
+        console.log("step = " + step);
     });
+
+    const updateCount = () => setCount(count + step);
+    const updateStep = e => setStep(parseInt(e.target.value));
 
     return (
         <>
             <p>you clicked {count} times!</p>
-            <input type="number" value={step} onChange={(e) => setStep(parseInt(e.target.value))}/>
-            <button onClick={() => setCount(count + step)}>click me</button>
+            <input type="number" value={step} onChange={updateStep}/>
+            <button onClick={updateCount}>click me</button>
+
         </>
     );
 };
