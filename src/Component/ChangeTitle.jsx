@@ -8,6 +8,14 @@ const ChangeTitle = () => {
         document.title = `you clicked ${count} times!`;
         console.log("count = " + count);
         console.log("step = " + step);
+        const interval = setInterval(() => {
+            console.log("interval");
+        }, 5000);
+
+        return () => {
+            clearInterval(interval);
+            console.log("interval is clear now")
+        }
     });
 
     const updateCount = () => setCount(count + step);
